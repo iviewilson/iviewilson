@@ -479,7 +479,61 @@ footer{
         padding: 25px;
     }
 }
+/* CONTACT SECTION */
+.contact {
+    padding: 6rem 0;
+}
 
+.contact-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+    border-color: #4db8d4;
+}
+
+.contact-icon {
+    font-size: 2rem;
+}
+
+.contact-card h3 {
+    margin: 0 0 0.4rem;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.contact-card p {
+    margin: 0;
+    color: #aeb6c7;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .contact-options {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        padding: 1.5rem;
+    }
+}
 </style>
 </head>
 
@@ -826,7 +880,43 @@ I'm actively seeking <strong style="color:#06B6D4;">remote cybersecurity analyst
     </div>
 
 </section>
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <div class="container">
 
+        <div class="section-header">
+            <span class="section-label">GET IN TOUCH</span>
+            <h2>Let's Work Together</h2>
+            <p class="section-subtitle">
+                Ready to discuss your project? Get in touch directly.
+            </p>
+        </div>
+
+        <div class="contact-options">
+
+            <a href="mailto:YOUR-EMAIL-HERE" class="contact-card">
+                <div class="contact-icon">✉️</div>
+                <div>
+                    <h3>Email Me</h3>
+                    <p>For project enquiries and professional discussions</p>
+                </div>
+            </a>
+
+            <a href="https://wa.me/YOUR-NUMBER-HERE"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-card">
+                <div class="contact-icon">💬</div>
+                <div>
+                    <h3>Chat on WhatsApp</h3>
+                    <p>Start a conversation about your project</p>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+</section>
 <!-- EXPERIENCE -->
 <section id="experience">
 <div class="container">
@@ -889,24 +979,38 @@ I'm actively seeking <strong style="color:#06B6D4;">remote cybersecurity analyst
 
 <!-- CONTACT -->
 <section id="contact">
-<div class="container contact">
+    <div class="container contact">
 
-<h2>Get In Touch</h2>
+        <div class="section-header">
+            <h2>Let's Work Together</h2>
+            <p class="section-subtitle">
+                Have a project, security concern, or technical issue? Get in touch.
+            </p>
+        </div>
 
-<p style="color:#CBD5E1; margin-bottom:0.5rem;">
-    I'm actively seeking remote cybersecurity analyst and IT support roles.
-</p>
-<p style="color:#CBD5E1;">
-    Email: <a href="mailto:iivie56@yahoo.com">iivie56@yahoo.com</a>
-</p>
+        <div class="contact-options">
 
-<div class="contact-links">
-    <a href="https://linkedin.com/in/iviewilson" target="_blank" class="btn">LinkedIn</a>
-    <a href="https://github.com/iviewilson" target="_blank" class="btn btn-outline">GitHub</a>
-    <a href="https://tryhackme.com/p/iivie56" target="_blank" class="btn btn-outline">TryHackMe</a>
-</div>
+            <a href="mailto:iivie56@yahoo.com" class="contact-card">
+                <span class="contact-icon">✉️</span>
+                <div>
+                    <h3>Email</h3>
+                    <p>Send a project enquiry</p>
+                </div>
+            </a>
 
-</div>
+            <a href=""https://wa.me/447858292581?text=Hello%20Ivie%2C%20I%20found%20you%20through%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project.""
+               target="_blank"
+               class="contact-card">
+                <span class="contact-icon">💬</span>
+                <div>
+                    <h3>WhatsApp</h3>
+                    <p>Start a conversation</p>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
 </section>
 
 <footer>
