@@ -533,7 +533,139 @@ footer{
     .contact-card {
         padding: 1.5rem;
     }
+
+/* =========================
+   WORK WITH ME
+========================= */
+
+.work-with-me {
+    padding: 6rem 0;
 }
+
+.work-with-me .section-header {
+    max-width: 720px;
+    margin-bottom: 3rem;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.work-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease,
+                background 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+    border-color: #4db8d4;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.work-icon {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+}
+
+.work-card h3 {
+    margin: 0 0 1rem;
+    font-size: 1.35rem;
+    color: #ffffff;
+}
+
+.work-card p {
+    margin: 0 0 2rem;
+    line-height: 1.7;
+    color: #aeb6c7;
+}
+
+.work-btn {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 0.8rem 1.25rem;
+    border: 1px solid #4db8d4;
+    border-radius: 8px;
+    color: #4db8d4;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.25s ease, color 0.25s ease,
+                transform 0.25s ease;
+}
+
+.work-btn:hover {
+    background: #4db8d4;
+    color: #08111f;
+    transform: translateY(-2px);
+}
+
+
+/* PROFESSIONAL LINKS */
+
+.professional-links {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.professional-links > p {
+    margin-bottom: 1rem;
+    color: #aeb6c7;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.professional-links-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.75rem;
+}
+
+.professional-links-row a {
+    color: #4db8d4;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.professional-links-row a:hover {
+    opacity: 0.75;
+    transform: translateY(-2px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .work-with-me {
+        padding: 4rem 0;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-card {
+        padding: 2rem;
+    }
+
+    .professional-links-row {
+        gap: 1rem 1.5rem;
+    }
+}
+    
 </style>
 </head>
 
@@ -977,40 +1109,80 @@ I'm actively seeking <strong style="color:#06B6D4;">remote cybersecurity analyst
 </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-    <div class="container contact">
+<!-- WORK WITH ME -->
+<section id="contact" class="work-with-me">
+    <div class="container">
 
         <div class="section-header">
-            <h2>Let's Work Together</h2>
+            <span class="section-label">LET'S CONNECT</span>
+            <h2>Work With Me</h2>
             <p class="section-subtitle">
-                Have a project, security concern, or technical issue? Get in touch.
+                Whether you're building your team or need technical support
+                for a project, there are two ways we can work together.
             </p>
         </div>
 
-        <div class="contact-options">
+        <div class="work-grid">
 
-            <a href="mailto:iivie56@yahoo.com" class="contact-card">
-                <span class="contact-icon">✉️</span>
-                <div>
-                    <h3>Email</h3>
-                    <p>Send a project enquiry</p>
-                </div>
-            </a>
+            <!-- EMPLOYERS -->
+            <div class="work-card">
+                <div class="work-icon">💼</div>
+                <h3>Hiring for a role?</h3>
+                <p>
+                    Looking for cybersecurity, SOC, or IT support talent?
+                    Explore my hands-on projects and experience, or get in
+                    touch to discuss how I can contribute to your team.
+                </p>
 
-            <a href=""https://wa.me/447858292581?text=Hello%20Ivie%2C%20I%20found%20you%20through%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project.""
-               target="_blank"
-               class="contact-card">
-                <span class="contact-icon">💬</span>
-                <div>
-                    <h3>WhatsApp</h3>
-                    <p>Start a conversation</p>
-                </div>
-            </a>
+                <a href="mailto:iivie56@yahoo.com?subject=Career%20Opportunity"
+                   class="work-btn">
+                    Discuss an Opportunity →
+                </a>
+            </div>
+
+            <!-- CLIENTS -->
+            <div class="work-card">
+                <div class="work-icon">⚙️</div>
+                <h3>Have a project in mind?</h3>
+                <p>
+                    Need a website, technical support, security review,
+                    or Wazuh SIEM setup? Let's discuss your requirements
+                    and determine the right approach.
+                </p>
+
+                <a href="https://wa.me/447858292581?text=Hello%20Ivie%2C%20I%20found%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project."
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="work-btn">
+                    Start a Project →
+                </a>
+            </div>
 
         </div>
 
+        <!-- PROFESSIONAL LINKS -->
+        <div class="professional-links">
+            <p>Connect / Find Me</p>
+
+            <div class="professional-links-row">
+                <a href="mailto:iivie56@yahoo.com">Email</a>
+
+                <a href="https://wa.me/447858292581"
+                   target="_blank"
+                   rel="noopener noreferrer">WhatsApp</a>
+
+                <a href="https://linkedin.com/in/iviewilson"
+                   target="_blank"
+                   rel="noopener noreferrer">LinkedIn</a>
+
+                <a href="https://github.com/iviewilson"
+                   target="_blank"
+                   rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+
     </div>
+</section>
 </section>
 
 <footer>
